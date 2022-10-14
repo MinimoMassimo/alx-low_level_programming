@@ -7,8 +7,7 @@
  */
 int main(void)
 {
-	char str[30] = "abcdefghijklmnopqrstuvwxyz";
-	
+	char str[30] = "abcdefghijklmnopqrstuvwxyz";	
 	printf("%s\n", str);
 	return (0);
 }
