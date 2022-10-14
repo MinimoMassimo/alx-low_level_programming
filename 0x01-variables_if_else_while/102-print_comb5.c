@@ -23,7 +23,7 @@ int main(void)
 					putchar((i % 10) + '0');
 					putchar((j % 10) + '0');
 					if(x != 9 || y != 8 || i != 9 || j != 8)
-						putchar(' ')
+						putchar(' ');
 				}
 			}
 			if(x != 9 || y != 8)
