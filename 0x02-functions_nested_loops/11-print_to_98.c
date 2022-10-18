@@ -33,11 +33,12 @@ void print_to_98(int n)
 				_putchar((a / 10) + '0');
 				a = a / 10;
 			}
-			_putchar((n % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-			n++;
 		}
+		_putchar((n % 10) + '0');
+		_putchar(',');
+		_putchar(' ');
+		n++;
+		
 	}
 	if (n == 98)
 	{
