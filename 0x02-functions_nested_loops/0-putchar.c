@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include <putchar.c>
 
 /**
  * main - prints '_putchar' using _putchar library
