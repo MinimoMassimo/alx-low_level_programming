@@ -32,8 +32,6 @@ void print_times_table(int n)
 			}
 			else if (a >= 10)
 				_putchar((a / 10) + '0');
-			if (a < 10 && a != 0)
-				_putchar(' ');
 			_putchar((a % 10) + '0');
 			if (j != n)
 			{
