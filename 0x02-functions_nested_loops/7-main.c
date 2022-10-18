@@ -9,10 +9,12 @@ int main(void)
 {
     int r;
 
-    print_last_digit(98);
-    print_last_digit(0);
+    b = print_last_digit(98);
+    a = print_last_digit(0);
     r = print_last_digit(-1024);
     _putchar('0' + r);
+    _putchar('0' + a);
+    _putchar('0' + b);
     _putchar('\n');
     return (0);
 }
