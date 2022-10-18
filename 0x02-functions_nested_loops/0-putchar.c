@@ -1,4 +1,4 @@
-#include <putchar.c>
+#include "_putchar.c"
 
 /**
  * main - prints '_putchar' using _putchar library
@@ -7,11 +7,13 @@
  */
 int main (void)
 {
-	char *str = "_putchar";
+	char str[] = "_putchar";
+	int i = 0;
 
-	while(*str)
+	while(str[i] != '\0')
 	{
-		_putchar(*str);
+		_putchar(str[i]);
+		i++;
 	}
 	_putchar('\n');
 	return (0);
