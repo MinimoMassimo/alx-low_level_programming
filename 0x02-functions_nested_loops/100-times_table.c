@@ -38,7 +38,7 @@ void print_times_table(int n)
 			if (j != n)
 			{
 				_putchar(',');
-				_putcahr(' ');
+				_putchar(' ');
 				if (a < 100)
 				{
 					_putchar(' ');
