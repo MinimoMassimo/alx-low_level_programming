@@ -7,13 +7,11 @@
  */
 int main (void)
 {
-	char str[] = "_putchar";
-	int i = 0;
+	char *str = "_putchar";
 
-	while(str[i] != '\0')
+	while(*str)
 	{
-		_putchar(str[i]);
-		i++;
+		_putchar(*str);
 	}
 	_putchar('\n');
 	return (0);
