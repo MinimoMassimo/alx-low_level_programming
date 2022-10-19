@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - finds and prints sum of even-valued terms of fibonacci sequence < 4000000
+ * main - finds and prints sum of even-valued terms of fibonacci sequence
  * Return: 0 always
  */
 int main(void)
 {
 	int i;
 	long int fib[34], sum;
-	
+
 	sum = 2;
 	fib[0] = 1;
 	fib[1] = 2;
