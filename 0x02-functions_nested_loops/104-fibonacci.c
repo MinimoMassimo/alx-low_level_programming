@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main prints first 98 Fibonacci numbers
+ * main - prints first 98 Fibonacci numbers
  *
  * Return: 0 always
  */
 int main(void)
 {
-	long int prev1, prev2;
+	long int prev, prev1, prev2;
 	int i;
 
 	prev1 = 1;
@@ -17,8 +17,9 @@ int main(void)
 	for (i = 2; i < 97; i++)
 	{
 		printf("%li, ", prev1 + prev2);
+		prev = prev1;
 		prev1 = prev2;
-		prev2 = prev1 + prev2;
+		prev2 = prev + prev2;
 	}
 	printf("%li\n", prev1 + prev2);
 	return (0);
