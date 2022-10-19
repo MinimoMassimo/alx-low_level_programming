@@ -22,3 +22,4 @@ int main(void)
 	}
 	printf("%li\n", prev1 + prev2);
 	return (0);
+}
