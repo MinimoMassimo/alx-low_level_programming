@@ -7,9 +7,9 @@
 int main(void)
 {
 	int i;
-	long int fib[34];
-	long int sum = 2;
-
+	long int fib[34], sum;
+	
+	sum = 2;
 	fib[0] = 1;
 	fib[1] = 2;
 	for (i = 2; i < 34; i++)
