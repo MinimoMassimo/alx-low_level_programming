@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper(intc) - checks for uppercase characters
+ * _isupper - checks for uppercase characters
  * @c: sincle input  char
  * Return: 1 if c is uppercase, 0 otherwise
  */
