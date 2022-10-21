@@ -17,8 +17,8 @@ int main(void)
 		{
 			n /= i;
 			max = i;
-			i++;
 		}
+		i++;
 	}
 	printf("%li\n", max);
 	return (0);
