@@ -15,11 +15,11 @@ int main(void)
 	{
 		while (n % i == 0)
 		{
-			n /= i;
+			n = n / i;
 			max = i;
 		}
 		i++;
 	}
 	printf("%li\n", max);
-	return (0);
+	return (max);
 }
