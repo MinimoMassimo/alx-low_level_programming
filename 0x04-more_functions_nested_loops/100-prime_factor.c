@@ -9,7 +9,7 @@ int main(void)
 {
 	long int n = 612852475143;
 	long int max;
-	long int i;
+	long int i = 2;
 
 	while (n > 1)
 	{
@@ -21,5 +21,5 @@ int main(void)
 		i++;
 	}
 	printf("%li\n", max);
-	return (max);
+	return (0);
 }
