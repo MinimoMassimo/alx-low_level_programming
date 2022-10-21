@@ -21,4 +21,5 @@ int main(void)
 		}
 	}
 	printf("%li\n", max);
-
+	return (0);
+}
