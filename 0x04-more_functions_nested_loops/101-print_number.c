@@ -11,7 +11,7 @@ void print_number(int n)
 	int j = 1;
 	int x = 10;
 
-	while ( x % x != n)
+	while ( n % x != n)
 	{
 		i++;
 		x *= 10;
