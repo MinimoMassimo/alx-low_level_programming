@@ -7,7 +7,7 @@
  */
 void print_number(int n)
 {
-	int i;
+	int i = 0;
 	int j = 1;
 
 	while ( n % i != n)
