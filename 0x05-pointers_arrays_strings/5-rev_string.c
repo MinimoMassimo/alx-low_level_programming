@@ -8,10 +8,10 @@
 void rev_string(char *s)
 {
 	int size = 0;
-	char *sol = &*s;
-	char *a = s;
+	char *sol;
 	int i = 0;
 
+	*sol = *s;
 	while (*sol != '\0')
 	{
 		sol++;
@@ -20,9 +20,9 @@ void rev_string(char *s)
 	size -= 1;
 	while (size >= 0)
 	{
-		a[i] = sol [i];
-		i++;
+		sol--;
+		*s = *sol;
+		s++;
 		size--;
 	}
-	*s = *a;
 }
