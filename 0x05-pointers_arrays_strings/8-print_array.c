@@ -9,7 +9,7 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
+	printf("%d\n", n);
 
 	printf("%li", sizeof(a));
 	/**
