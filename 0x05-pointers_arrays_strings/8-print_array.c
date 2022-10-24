@@ -11,8 +11,9 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 1; a[i] != '\0';)
+	for (i = 0; a[i] != '\0';)
 		i++;
+	printf("%d\n", i);
 	if (i < n)
 	{
 		for (i = 0; i < (n - 1); i++)
