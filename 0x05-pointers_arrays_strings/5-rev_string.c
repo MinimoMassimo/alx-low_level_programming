@@ -9,6 +9,7 @@ void rev_string(char *s)
 {
 	int size = 0;
 	char *sol = &*s;
+	char *a = &*s;
 
 	while (*sol != '\0')
 	{
@@ -19,8 +20,9 @@ void rev_string(char *s)
 	while (size >= 0)
 	{
 		sol--;
-		*s = *sol;
-		s++;
-		size --;
+		*a = *sol;
+		a++;
+		size--;
 	}
+	s = a;
 }
