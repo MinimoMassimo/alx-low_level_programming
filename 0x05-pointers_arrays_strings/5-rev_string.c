@@ -24,5 +24,5 @@ void rev_string(char *s)
 		a++;
 		size--;
 	}
-	s = a;
+	s = sol;
 }
