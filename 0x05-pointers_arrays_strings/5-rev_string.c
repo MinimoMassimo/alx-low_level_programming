@@ -12,17 +12,17 @@ void rev_string(char *s)
 
 	sol = s;
 
-	while (*s != '\0')
+	while (*sol != '\0')
 	{
-		s++;
+		sol++;
 		size++;
 	}
 	size -= 1;
 	while (size >= 0)
 	{
-		*(sol + size) = *s;
-		s--;
+		sol--;
+		s = sol;
+		s++;
 		size --;
 	}
-	s = sol;
 }
