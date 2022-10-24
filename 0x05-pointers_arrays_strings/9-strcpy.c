@@ -10,8 +10,8 @@ char *_strcpy(char *dest, char *src)
 {
 	char *ptr = dest;
 
-	if (dest == NULL)
-		return (NULL);
+	if (!dest)
+		return ();
 
 	while (*src != '\0')
 	{
