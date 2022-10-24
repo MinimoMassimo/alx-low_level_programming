@@ -20,9 +20,9 @@ void rev_string(char *s)
 	size -= 1;
 	while (size >= 0)
 	{
-		a[i] = sol [size];
+		a[i] = sol [i];
 		i++;
 		size--;
 	}
-	s = a;
+	*s = *a;
 }
