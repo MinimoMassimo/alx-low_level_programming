@@ -17,12 +17,13 @@ void rev_string(char *s)
 		size++;
 	}
 	size -= 1;
+	/**
 	while (size >= 0)
 	{
 		sol--;
 		*a = *sol;
 		a++;
 		size--;
-	}
+	}**/
 	s = sol;
 }
