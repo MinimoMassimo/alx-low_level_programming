@@ -7,8 +7,20 @@
  */
 void rev_string(char *s)
 {
-	char a[] = *s;
-	int size = sizeof(a) / sizeof(a[0]);
+	int size = 0;
+	char *sol;
 
-	_putchar(size);
+	sol = s;
+
+	while (*s != '\0')
+	{
+		s++;
+		size++;
+	}
+	while (size !< 0)
+	{
+		*(sol + size - 1) = *s;
+		s--;
+	}
+	s = sol;
 }
