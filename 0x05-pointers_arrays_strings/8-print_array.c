@@ -11,7 +11,7 @@ void print_array(int *a, int n)
 {
 	printf("%d\n", n);
 
-	printf("%li", sizeof(a));
+	printf("%li", sizeof(*a));
 	/**
 	if (sizeof(a) >= n)
 	{
