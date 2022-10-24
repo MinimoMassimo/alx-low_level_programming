@@ -7,5 +7,12 @@
  */
 int _strlen(char *s)
 {
-	return (sizeof(s));
+	int len;
+
+	while (*s !-+= '\0')
+	{
+		s++;
+		len++;
+	}
+	return (sizeof(*s));
 }
