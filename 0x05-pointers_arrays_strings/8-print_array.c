@@ -12,6 +12,7 @@ void print_array(int *a, int n)
 	int i;
 
 	printf("%li", sizeof(a));
+	/**
 	if (sizeof(a) >= n)
 	{
 		for (i = 0; i < (n - 1); i++)
@@ -22,4 +23,4 @@ void print_array(int *a, int n)
 	}
 	else
 		printf("\n");
-}
+**/}
