@@ -18,10 +18,10 @@ void rev_string(char *s)
 		size++;
 	}
 	size -= 1;
-	for (i = 0; i < (size / 2); i++)
+	for (i = 0; i <= (size / 2); i++)
 	{
 		sol--;
-		temp = s[i]; 
+		temp = s[i];
 		s[i] = *sol;
 		*sol = temp;
 	}
