@@ -7,7 +7,7 @@
  */
 void rev_string(char *s)
 {
-	char a = *s;
+	char a[] = *s;
 	int size = sizeof(a) / sizeof(a[0]);
 
 	_putchar(size);
