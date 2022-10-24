@@ -19,7 +19,7 @@ void rev_string(char *s)
 	while (size >= 0)
 	{
 		sol--;
-		s = sol;
+		*s = *sol;
 		s++;
 		size --;
 	}
