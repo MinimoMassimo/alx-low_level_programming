@@ -19,11 +19,11 @@ int _atoi(char *s)
 	}
 	if (s[0] == '+')
 		s++;
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (*s < 48 || *s > 57)
 			return(0);
-		res = res * 10 + str[i] - '0';
+		res = res * 10 + s[i] - '0';
 	}
 	if (a == 1)
 		res *= -1;
