@@ -11,7 +11,7 @@ char *_strcpy(char *dest, char *src)
 	char *ptr = dest;
 
 	if (!dest)
-		return ();
+		return ('\0');
 
 	while (*src != '\0')
 	{
