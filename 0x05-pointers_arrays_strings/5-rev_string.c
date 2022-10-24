@@ -17,7 +17,7 @@ void rev_string(char *s)
 		s++;
 		size++;
 	}
-	while (size !< 0)
+	while (size >= 0)
 	{
 		*(sol + size - 1) = *s;
 		s--;
