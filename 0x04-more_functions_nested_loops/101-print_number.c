@@ -17,7 +17,7 @@ void print_number(int n)
 		n *= -1;
 		a = 1;
 	}
-	while ( n % x != n)
+	while (n % x != n)
 	{
 		i++;
 		x *= 10;
@@ -25,15 +25,14 @@ void print_number(int n)
 	while (i != 0)
 	{
 		j *= 10;
-		i --;
+		i--;
 	}
 	if (a == 1)
 		_putchar('-');
 	_putchar((n / j) + '0');
-	while ( j / 10 >= 1)
+	while (j / 10 >= 1)
 	{
 		_putchar(((n % j) / (j / 10)) + '0');
 		j /= 10;
 	}
-	_putchar('\n');
 }
