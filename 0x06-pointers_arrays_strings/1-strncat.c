@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strncat - concatenates twho strings
+ * *_strncat - concatenates two strings
  * @dest: first string
  * @src: string to be concatenated
  * @n: the max number of bytes it will use from src
@@ -10,6 +10,18 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
+	int count = 0;
+
+	while (dest[count] != '\0')
+	{
+		count++
+	}
+	while (str[i] != '\0' || i <= n)
+	{
+		dest[count + i] = str[i];
+		i++;
+	}
+/**
 
 	while (*dest != '\0')
 		dest++;
@@ -20,6 +32,6 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	}
 	dest++;
-	*dest = '\0';
+	*dest = '\0';**/
 	return (dest);
 }
