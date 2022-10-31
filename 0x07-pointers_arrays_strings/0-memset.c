@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_memset - fills memory with a constant byte
+ * *_memset - fills memory with ig constant byte
  * @s: the address to be filled
  * @n: the number of bytes of memory pointed to by s to be filled
  * @b: the constant byte
@@ -9,9 +9,13 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	for (n -= 1; n >= 0; n--)
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
 	{
-		s[n] = b;
+		if (s[i] == '\0')
+			break;
+		s[i] = b;
 	}
 	return (s);
 }
