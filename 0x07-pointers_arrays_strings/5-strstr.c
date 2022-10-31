@@ -30,6 +30,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	p = haystack[i];
-	if (a = 1)
+	if (a == 1)
 		return (p);
+	return ('\0');
 }
