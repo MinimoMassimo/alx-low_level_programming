@@ -5,7 +5,7 @@
  * *_strstr - locates a substring in a string
  * @needle: the substring
  * @haystack: the full string
- * Return: pointe to beggining of needle in haystack or NULL if needle not found
+ * Return: point to beggining of needle in haystack or NULL if needle not found
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -24,7 +24,7 @@ char *_strstr(char *haystack, char *needle)
 		if (i != count)
 			haystack++;
 		else
-			return(haystack);
+			return (haystack);
 	}
 	return (NULL);
 }
