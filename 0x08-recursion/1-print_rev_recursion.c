@@ -7,7 +7,6 @@
  */
 void _print_rev_recursion(char *s)
 {
-	s++;
 	if (*s == '\n')
 	{
 		_putchar('\n');
@@ -15,7 +14,7 @@ void _print_rev_recursion(char *s)
 	}
 	if (*s)
 	{
-		_print_rev_recursion(s+1);
+		_print_rev_recursion(s + 1);
 		_putchar(*s);
 	}
 }
