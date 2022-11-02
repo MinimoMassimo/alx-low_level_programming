@@ -8,10 +8,11 @@
 int _strlen_recursion(char *s)
 {
 	int count = 0;
+
 	if (*s)
 	{
 		count += _strlen_recursion(s + 1);
-		count ++;
+		count++;
 	}
 	return (count);
 }
@@ -29,7 +30,7 @@ int pal(char *s, int a, int b)
 	if (s[a] != s[b])
 		return (0);
 	if (a < b + 1)
-		return pal(s, a + 1, b - 1); 
+		return (pal(s, a + 1, b - 1));
 	return (1);
 }
 /**
