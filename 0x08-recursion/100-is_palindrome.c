@@ -30,6 +30,7 @@ int pal(char *s, int a, int b)
 		return (0);
 	if (a < b + 1)
 		return pal(s, a + 1, b - 1); 
+	return (1);
 }
 /**
  * is_palindrome - tells if string is a palindrome
@@ -40,9 +41,9 @@ int is_palindrome(char *s)
 {
 	int count;
 
-	if (*s == '')
+	if (*s == '\0')
 		return (1);
 	count = _strlen_recursion(s);
-	pal(s, 0, count - 1);
+	return (pal(s, 0, count - 1));
 
 }
