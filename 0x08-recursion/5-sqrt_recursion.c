@@ -1,5 +1,19 @@
 #include "main.h"
 
+/** sqrtt - helper function
+ * @n: the number
+ * @i: the solution
+ * Return: the solution
+ */
+int sqrtt(int n, int i)
+{
+	if (n / i == i)
+		return (i);
+	sqrtt(n, i + 1);
+	if (i >= n / 2)
+		return (-1);
+
+}
 /**
  * _sqrt_recursion - returns square root of n
  * @n: single input
@@ -7,10 +21,6 @@
  */
 int _sqrt_recursion(int n)
 {
-	int q;
-	if (q * q == n)
-		return (q);
-	
-	q = _sqrt_recursion(n - 1);
-	return (n);
+	int q = 1;
+	return (sqrtt(n,q);
 }
