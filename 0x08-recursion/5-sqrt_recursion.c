@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** sqrtt - helper function
+/**
+ * sqrtt - helper function
  * @n: the number
  * @i: the solution
  * Return: the solution
@@ -21,5 +22,6 @@ int sqrtt(int n, int i)
 int _sqrt_recursion(int n)
 {
 	int q = 1;
+
 	return (sqrtt(n, q));
 }
