@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 /**
  * main - adds positive numbers
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; j < (int) strlen(argv[i]); j++)
 		{
-			if (!isdigit(argv[i][j]))
+			if (isdigit(argv[i][j]) == 0)
 			{
 				printf("Error\n");
 				return (1);
