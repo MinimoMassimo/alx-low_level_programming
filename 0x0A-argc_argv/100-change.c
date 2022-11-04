@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 0; change - k[i] >= 0 && i < 5;)
+		for (i = 0; change >= 0 && i < 5;)
 		{
 			if (change - k[i] < 0)
 				i++;
