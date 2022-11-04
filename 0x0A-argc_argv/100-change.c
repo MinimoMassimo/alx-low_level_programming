@@ -27,7 +27,10 @@ int main(int argc, char *argv[])
 		for (i = 0; change >= 0 && i < 5;)
 		{
 			if (change - k[i] < 0)
+			{
 				i++;
+				continue;
+			}
 			change -= k[i];
 			coins++;
 		}
