@@ -8,8 +8,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int change;
+	int change, i;
 	int coins = 0;
+	int k[] = {25, 10, 5, 2, 1}
 
 	if (argc != 2)
 	{
@@ -23,29 +24,11 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		while (change - 25 >= 0)
+		for (i = 0; change - k[i] >= 0 && i < 5;)
 		{
-			change -= 25;
-			coins++;
-		}
-		while (change - 10 >= 0)
-		{
-			change -= 10;
-			coins++;
-		}
-		while (change - 5 >= 0)
-		{
-			change -= 5;
-			coins++;
-		}
-		while (change - 2 >= 0)
-		{
-			change -= 2;
-			coins++;
-		}
-		while (change -1 >= 0)
-		{
-			change -= 1;
+			if (change - k[i] < 0)
+				i++;
+			change -= k[i];
 			coins++;
 		}
 	}
