@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		res += (int) argv[i];
+		res = (int) argv[i] + res;
 	}
 	printf("%d\n", res);
 	return (0);
