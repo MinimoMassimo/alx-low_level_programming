@@ -12,11 +12,11 @@ int main(void)
     char s2[] = "World!\n";
     char *ptr;
 
-    printf("%s\n", s1);
-    printf("%s", s2);
+    printf("s1: %s\n", s1);
+    printf("s2: %s", s2);
     ptr = _strcat(s1, s2);
-    printf("%s", s1);
-    printf("%s", s2);
-    printf("%s", ptr);
+    printf("s1a: %s", s1);
+    printf("s2a: %s", s2);
+    printf("ptr: %s", ptr);
     return (0);
 }
