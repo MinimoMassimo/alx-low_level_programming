@@ -18,10 +18,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	change = atoi(argv[1]);
-	if (change < 0)
-	{
-		printf("0\n");
-	}
 	else
 	{
 		for (i = 0; change >= 0 && i < 5;)
