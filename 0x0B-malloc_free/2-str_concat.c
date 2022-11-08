@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 	nw = malloc(size1 + size2 - 1);
 	if (nw == NULL)
 		return (NULL);
-	for (i = 0 i < (size1 + size2 - 1); i++)
+	for (i = 0; i < (size1 + size2 - 1); i++)
 	{
 		if (i < size1)
 			nw[i] = s1[i];
