@@ -46,7 +46,7 @@ char *argstostr(int ac, char **av)
 		if (av[i] == NULL)
 			av[i] = "";
 		size += len(av[i]);
-	}	
+	}
 	res = malloc((size + 1) * sizeof(char));
 	if (res == NULL)
 	{
@@ -57,4 +57,5 @@ char *argstostr(int ac, char **av)
 	{
 		_concat(res, av[i]);
 	}
+	return (res);
 }
