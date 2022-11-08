@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strlen - length of string
+ * len - length of string
  * @str: the string
  * Return: the length
  */
@@ -10,7 +10,10 @@ int len(char *str)
 {
 	int size;
 
-	for (size = 0; str[size] != '\0'; size++);
+	for (size = 0; str[size] != '\0'; size++)
+	{
+	}
+	size++;
 	return (size);
 }
 /**
