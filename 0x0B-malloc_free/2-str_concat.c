@@ -9,10 +9,9 @@
 int len(char *str)
 {
 	int size;
-	
-	for(size  = 0; str[size]; size++)
-	{
-	}
+
+	for (size  = 0; str[size];)
+		size++;
 	size++;
 	return size;
 }
@@ -24,17 +23,21 @@ int len(char *str)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size1 = len(s1);
-	int size2 = len(s2);
+	int size1, size2, i;
 	char *nw;
-	int i;
 
-	nw = malloc(size1 + size2);
-	if(nw == NULL)
+	if (s1 == NULL)
+		size1 = 0;
+	if (s2 == NULL)
+		size2 = 0;
+	size1 = len(s1);
+	size2 = len(s2);
+	nw = malloc(size1 + size2 - 1);
+	if (nw == NULL)
 		return (NULL);
-	for(i = 0; i < size1; i++)
+	for (i = 0; i < size1; i++)
 		nw[i] = s1[i];
-	for(i = size1; i < (size1 + size2); i++)
+	for (i = size1; i < (size1 + size2); i++)
 		nw[i] = s2[i - size1];
 	return (nw);
 }
