@@ -9,15 +9,15 @@
 int len(char *str)
 {
 	int len;
-	
+
 	for (len = 0; str[len]; len++)
 	;
 	return (len);
 }
 /**
  * _concat - concatenates strings
- * @s1 - one string
- * @s2 - second string
+ * @s1: one string
+ * @s2: second string
  * Return: the new string
  */
 char *_concat(char *s1, char *s2)
@@ -56,10 +56,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		_concat(res, av[i]);
-		if (i != (ac - 1))
-		{
-			_concat(res, "\n");
-		}
+		_concat(res, "\n");
 	}
 	return (res);
 }
