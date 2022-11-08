@@ -6,9 +6,9 @@
  * @str: the string
  * Return: the length
  */
-int strlen(char *str)
+int len(char *str)
 {
-	int size, i;
+	int size;
 
 	for (size = 0; str[size] != '\0'; size++);
 	return (size);
@@ -26,7 +26,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	size = strlen(str);
+	size = len(str);
 	nw = malloc(size);
 	if (nw == NULL)
 		return (NULL);
