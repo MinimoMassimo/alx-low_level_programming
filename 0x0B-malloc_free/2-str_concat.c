@@ -13,7 +13,7 @@ int len(char *str)
 	for (size  = 0; str[size];)
 		size++;
 	size++;
-	return size;
+	return (size);
 }
 /**
  * *str_concat - concatenates two strings
@@ -28,10 +28,12 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 		size1 = 0;
+	else
+		size1 = len(s1);
 	if (s2 == NULL)
 		size2 = 0;
-	size1 = len(s1);
-	size2 = len(s2);
+	else
+		size2 = len(s2);
 	nw = malloc(size1 + size2 - 1);
 	if (nw == NULL)
 		return (NULL);
