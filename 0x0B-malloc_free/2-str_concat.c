@@ -10,11 +10,28 @@ int len(char *str)
 {
 	int size;
 
-	for (size  = 0; str[size];)
-		size++;
-	size++;
+	for (size  = 0; str[size]; size++)
+	;
 	return (size);
 }
+
+/**
+ * _concat - concatenates strings
+ * @a: first string
+ * @b: second string
+ * Return: the new string
+ */
+char *_concat(char *a, char *b)
+{
+	int l1 = len(a);
+	int l2 = len(b);
+	int i = 0;
+
+	for (; i < l2 && b[i] != '\0'; i++)
+		a[l1 + i] = b[i];
+	return (a);
+}
+
 /**
  * *str_concat - concatenates two strings
  * @s1: first string
@@ -27,32 +44,15 @@ char *str_concat(char *s1, char *s2)
 	char *nw;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-		size1 = 0;
-	}
-	else
-		size1 = len(s1);
+	size1 = len(s1);
 	if (s2 == NULL)
-	{
 		s2 = "";
-		size2 = 0;
-	}
-	else
-		size2 = len(s2);
-	nw = malloc(size1 + size2 - 1);
+	size2 = len(s2);
+	nw = malloc((size1 + size2 + 1) * sizeof(char);
 	if (nw == NULL)
 		return (NULL);
-	j = 0;
-	for (i = 0; i < (size1 + size2 - 1); i++)
-	{
-		if (i < (size1 - 1))
-			nw[i] = s1[i];
-		else
-		{
-			nw[i] = s2[j];
-			j++;
-		}
-	}
+	_concat(nw, s1);
+	_concat(nw, s2);
 	return (nw);
 }
