@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 		size2 = len(s2);
 	if (s1 == NULL && s2 == NULL)
 	{
-		char *p = " ";
+		char *p = "\0";
 
 		return (p);
 	}
