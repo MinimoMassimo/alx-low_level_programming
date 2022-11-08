@@ -27,19 +27,19 @@ char *str_concat(char *s1, char *s2)
 	char *nw;
 
 	if (s1 == NULL)
+	{
+		s1 = "";
 		size1 = 0;
+	}
 	else
 		size1 = len(s1);
 	if (s2 == NULL)
+	{
+		s2 = "";
 		size2 = 0;
+	}
 	else
 		size2 = len(s2);
-	if (s1 == NULL && s2 == NULL)
-	{
-		char *p = "\0";
-
-		return (p);
-	}
 	nw = malloc(size1 + size2 - 1);
 	if (nw == NULL)
 		return (NULL);
