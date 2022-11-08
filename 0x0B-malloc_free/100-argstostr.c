@@ -41,6 +41,8 @@ char *argstostr(int ac, char **av)
 	char *res;
 	int i, size = 0;
 
+	if (av == NULL || ac == 0)
+		return NULL;
 	for (i = 0; i < ac; i++)
 	{
 		if (av[i] == NULL)
