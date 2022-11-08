@@ -58,7 +58,7 @@ char *argstostr(int ac, char **av)
 		_concat(res, av[i]);
 		if (i != (ac - 1))
 		{
-			_concat(res, ' ');
+			_concat(res, " ");
 		}
 	}
 	return (res);
