@@ -42,8 +42,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (i < (size1 - 1))
 			nw[i] = s1[i];
-		else if (i == size1 - 1)
-			nw[i] = ' ';
 		else
 		{
 			nw[i] = s2[j];
