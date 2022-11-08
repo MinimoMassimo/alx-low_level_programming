@@ -2,17 +2,6 @@
 #include <stdlib.h>
 
 /**
- * _fill - fills matrix with 0s
- * @width: the width
- * @height: the height
- * Return: the new matrix
- */
-int **_fill(int width, int height)
-{
-	for
-}
-
-/**
  * alloc_grid - returns pointer to a 2d array of ints
  * @width: the width of the array
  * @height: the height
