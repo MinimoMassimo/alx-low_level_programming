@@ -40,7 +40,7 @@ char *_concat(char *a, char *b)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size1, size2, i, j;
+	int size1, size2;
 	char *nw;
 
 	if (s1 == NULL)
@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 	size2 = len(s2);
-	nw = malloc((size1 + size2 + 1) * sizeof(char);
+	nw = malloc((size1 + size2 + 1) * sizeof(char));
 	if (nw == NULL)
 		return (NULL);
 	_concat(nw, s1);
