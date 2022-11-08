@@ -38,14 +38,14 @@ char *_concat(char *s1, char *s2)
  */
 char *argstostr(int ac, char **av)
 {
-	char *res, temp;
+	char *res;
 	int i, size = 0;
 
 	for (i = 0; i < ac; i++)
 	{
 		if (av[i] == NULL)
 			av[i] = "";
-		size += len(size[i]);
+		size += len(av[i]);
 	}	
 	res = malloc((size + 1) * sizeof(char));
 	if (res == NULL)
