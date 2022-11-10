@@ -20,7 +20,7 @@ int len(char *str)
  * @s2: second
  * Return: the new string
  */
-char *_cooncat(char *s1, char *s2, n)
+char *_concat(char *s1, char *s2, int n)
 {
 	int size1 = len(s1);
 	int size2 = len(s2);
@@ -44,7 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int size2;
 	int size1;
 	char *ptr;
-	unsigned int i;
 
 	if (s1 == NULL)
 		s1 = "";
