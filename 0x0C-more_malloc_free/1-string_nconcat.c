@@ -20,13 +20,13 @@ int len(char *str)
  * @s2: second
  * Return: the new string
  */
-char *_concat(char *s1, char *s2)
+char *_cooncat(char *s1, char *s2, n)
 {
 	int size1 = len(s1);
 	int size2 = len(s2);
 	int i;
 
-	for(i = 0; i < size2 && s2[i]; i++)
+	for(i = 0; i < n && s2[i]; i++)
 	{
 		s1[size1 + i] = s2[i];
 	}
@@ -44,7 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int size2;
 	int size1;
 	char *ptr;
-	char *str;
 	unsigned int i;
 
 	if (s1 == NULL)
@@ -56,12 +55,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= (unsigned int) size2)
 		n = size2;
 	ptr = malloc(size1 + n + 1);
-	str = malloc(n);
-	if (ptr == NULL || str == NULL)
+	if (ptr == NULL)
 		return (NULL);
-	_concat(ptr, s1);
-	for (i = 0; i < n; i++)
-		str[i] = s2[i];
+	_concat(ptr, s1, size1);
+	_concat(ptr, s2, n);
 	_concat(ptr, '\0');
 	return (ptr);
 }
