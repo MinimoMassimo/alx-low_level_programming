@@ -20,10 +20,9 @@ int len(char *str)
  * @s2: second
  * Return: the new string
  */
-char *_concat(char *s1, char *s2, int n)
+char *_cat(char *s1, char *s2, int n)
 {
 	int size1 = len(s1);
-	int size2 = len(s2);
 	int i;
 
 	for(i = 0; i < n && s2[i]; i++)
@@ -56,8 +55,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(size1 + n + 1);
 	if (ptr == NULL)
 		return (NULL);
-	_concat(ptr, s1, size1);
-	_concat(ptr, s2, n);
-	_concat(ptr, '\0');
+	_cat(ptr, s1, size1);
+	_cat(ptr, s2, n);
+	_cat(ptr, '\0', 1);
 	return (ptr);
 }
