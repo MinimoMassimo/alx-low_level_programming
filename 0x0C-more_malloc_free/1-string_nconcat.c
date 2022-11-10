@@ -55,8 +55,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(size1 + n + 1);
 	if (ptr == NULL)
 		return (NULL);
-	_cat(ptr, s1, size1);
-	_cat(ptr, s2, n);
-	_cat(ptr, '\0', 1);
-	return (ptr);
+	_cat(s1, s2, n);
+	_cat(ptr, "\0", 1);
+	return;
 }
