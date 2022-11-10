@@ -22,7 +22,7 @@ int len(char *str)
  */
 char *_concat(char *s1, char *s2)
 {
-	int size1 = lenn(s1);
+	int size1 = len(s1);
 	int size2 = len(s2);
 	int i;
 
@@ -41,18 +41,19 @@ char *_concat(char *s1, char *s2)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	if (s1 == NULL)
-		s1 = '';
-	if (s2 == NULL)
-		s2 = '';
-
-	int size2 = len(S2);
-	int size1 = len(s1);
+	int size2;
+	int size1;
 	char *ptr;
-	char *str[n];
-	int i, l;
+	char str[n];
+	unsigned int i;
 
-	if (n >= size2)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	size2 = len(s2);
+	size1 = len(s1);
+	if (n >= (unsigned int) size2)
 		n = size2;
 	ptr = malloc(size1 + n + 1);
 	if (ptr == NULL)
