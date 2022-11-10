@@ -57,5 +57,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	_cat(s1, s2, n);
 	_cat(ptr, "\0", 1);
-	return;
+	return (ptr);
 }
