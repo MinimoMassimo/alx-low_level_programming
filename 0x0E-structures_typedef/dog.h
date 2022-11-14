@@ -1,6 +1,10 @@
 #ifndef DOG_H
 #define DOG_H
-#define dog_t "struct dog"
+
+/**
+ * dog_t - replacement
+ */
+typedef struct dog dog_t;
 
 /**
  * struct dog - defines a dog
