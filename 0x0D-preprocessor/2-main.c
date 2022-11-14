@@ -5,8 +5,8 @@
  * main - prints name of file it was compiled from
  * Return: always 0
  */
-int main(void)
+int main(int argc, char **argv)
 {
-	printf("%s\n", _FILE_); 
+	printf("%s\n", argv[0]); 
 	return (0);
 }
