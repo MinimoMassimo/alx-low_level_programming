@@ -17,7 +17,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		ret = cmp(array[i]);
 		if (ret != 0)
-			return(i);
+			return (i);
 	}
 	return (-1);
 }
