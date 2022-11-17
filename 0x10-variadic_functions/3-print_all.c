@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	while (format[i])
 	{
 		if (format[i] == 'c')
-			printf("%c", (char) va_arg(ans, int));
+			printf("%c", va_arg(ans, int));
 		else if (format[i] == 'i')
 			printf("%d", va_arg(ans, int));
 		else if(format[i] == 'f')
