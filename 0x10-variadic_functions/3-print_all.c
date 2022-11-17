@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	va_start(ans, format);
-	while (format[i])
+	while (format != NULL)
 	{
 		if (format[i] == 'c')
 			printf("%c", va_arg(ans, int));
