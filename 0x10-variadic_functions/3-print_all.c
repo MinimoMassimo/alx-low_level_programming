@@ -15,11 +15,11 @@ void print_all(const char * const format, ...)
 	while (format[i])
 	{
 		if (format[i] == 'c')
-			printf("%c", va_arg(ans, char));
+			printf("%c", (char)va_arg(ans, int));
 		else if (format[i] == 'i')
 			printf("%d", va_arg(ans, int));
 		else if(format[i] == 'f')
-			printf("%f", va_arg(ans, float));
+			printf("%f", (float)va_arg(ans, double));
 		else if(format[i] == 's')
 			printf("%s", va_arg(ans, char*));
 		if (format[i+1])
