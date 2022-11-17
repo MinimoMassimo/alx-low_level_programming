@@ -1,10 +1,10 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * main - calls functions
- * Return: always 0
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: the answer or error if something is wrong
  */
 int main(int argc, char *argv[])
 {
