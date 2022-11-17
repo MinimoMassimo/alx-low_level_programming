@@ -13,7 +13,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *sep, *ans;
 
-	if (separator == NULL || *separator== 0)
+	if (separator == NULL || *separator == 0)
 		sep = "";
 	else
 		sep = (char *) separator;
