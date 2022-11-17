@@ -4,7 +4,7 @@
  * op_add - sums a and b
  * @a: first int
  * @b: second int
- * Return: sum 
+ * Return: sum
  */
 int op_add(int a, int b)
 {
