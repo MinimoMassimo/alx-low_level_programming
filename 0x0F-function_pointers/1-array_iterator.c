@@ -12,11 +12,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	size_t i;
 
 	if (size == NULL || action == NULL)
-		return (NULL);
+		return;
 	for (i = 0; i < size; i++)
 	{
 		if (array[i] == NULL)
-			return (NULL);
+			return;
 		action(array[i]);
 	}
 }
