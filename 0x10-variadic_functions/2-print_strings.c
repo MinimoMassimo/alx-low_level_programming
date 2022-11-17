@@ -18,8 +18,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 1; i < n; i++)
 	{
 		res = va_arg(p, char*);
-		if (res == "(null)")
-			printf("");
 		if (separator == NULL)
 			printf("%s", res);
 		else
