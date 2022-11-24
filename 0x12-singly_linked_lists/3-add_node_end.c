@@ -23,10 +23,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		for (;;)
 		{
+			printf("%s\n", (**head).str);
 			if ((**head).next == NULL)
 				break;
 			*head = (**head).next;
-			printf("%s", (**head).str);
 		}
 		(**head).next = curr;
 	}
