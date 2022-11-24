@@ -6,6 +6,7 @@
  * add_node_end - adds node to end of list
  * @head: pointer to head of the list
  * @str: the value
+ * Return: address of last added node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
