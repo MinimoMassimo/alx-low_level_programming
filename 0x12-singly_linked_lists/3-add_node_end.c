@@ -9,12 +9,6 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *curr;
 
-	for (; *head != NULL;)
-	{
-		if ((**head).next == NULL)
-			break;
-		*head = (**head).next;
-	}
 	curr = malloc(sizeof(list_t));
 	if (curr == NULL)
 		return (NULL);
@@ -24,6 +18,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 		*head = curr;
 	else
+	{
+		for (;;)
+		{
+			if ((**head).next == NULL)
+				break;
+			*head = (**head).next;
+		}
 		(**head).next = curr;
+	}
 	return (curr);
 }
