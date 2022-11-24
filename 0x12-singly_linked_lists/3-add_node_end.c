@@ -9,7 +9,7 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *curr;
 
-	while (1)
+	for (; *head != NULL;)
 	{
 		if ((**head).next == NULL)
 			break;
@@ -21,6 +21,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	curr->str = strdup(str);
 	curr->len = strlen(str);
 	curr->next = NULL;
-	(**head).next = curr;
+	if (*head == NULL)
+		*head = curr;
+	else
+		(**head).next = curr;
 	return (curr);
 }
