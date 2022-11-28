@@ -24,7 +24,7 @@ int main(void)
     print_listint(head);
     free_listint(head);
     
-    print_listint(head->next);
+    printf(head->next);
     head = NULL;
     return (0);
 }
