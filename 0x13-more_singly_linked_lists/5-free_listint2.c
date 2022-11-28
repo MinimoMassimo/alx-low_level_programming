@@ -1,4 +1,4 @@
-#include "lists.c"
+#include "lists.h"
 
 /**
  * free_listint2 - sets the head to null
