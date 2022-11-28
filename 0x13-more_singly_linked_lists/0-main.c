@@ -14,6 +14,7 @@ int main(void)
     listint_t *new;
     listint_t hello = {8, NULL};
     size_t n;
+    int a;
 
     head = &hello;
     new = malloc(sizeof(listint_t));
@@ -22,7 +23,7 @@ int main(void)
         printf("Error\n");
         return (1);
     }
-    new->n = 9;
+    new->n = a;;
     new->next = head;
     head = new;
     n = print_listint(head);
