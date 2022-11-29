@@ -20,9 +20,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (temp == NULL)
 			return (-1);
 	}
-	cur = temp->next;
-	temp->next = cur->next;
-	free(cur);
-	cur = NULL;
+	if (index == 0)
+	{
+		head = &(**head).next;
+		free (cur);
+	}
+	else
+	{
+		cur = temp->next;
+		temp->next = cur->next;
+		free(cur);
+	}
 	return (1);
 }
