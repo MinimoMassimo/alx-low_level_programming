@@ -9,10 +9,16 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t n = 0;
-	listint_t *temp = (listint_t) head;
+	listint_t *temp;
 
 	if (head == NULL)
 		exit(98);
+	temp = malloc(sizeof(listint_t));
+	if (temp == NULL)
+		exit(98);
+	temp->n = head->n;
+	temp->next = head->next;
+
 	for (; temp != NULL; n++)
 	{
 		printf("%d\n", temp->n);
