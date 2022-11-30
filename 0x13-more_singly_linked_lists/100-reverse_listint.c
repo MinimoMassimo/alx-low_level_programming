@@ -5,7 +5,7 @@
  * @head: the head of the list
  * Return: pointer to head of reversed list
  */
-lsitint_t *reverse_listint(listint_t **head)
+listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *nuovo = *head;
 	listint_t *temp = (**head).next;
