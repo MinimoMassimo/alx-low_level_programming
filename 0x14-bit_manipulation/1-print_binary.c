@@ -31,7 +31,7 @@ void printing(int curr, int size)
 	if (size <= 0)
 		return;
 	printing(curr / 2, size - 1);
-	_putchar((curr % 2) % 10) + '0';
+	_putchar((curr % 2) % 10 + '0');
 }
 
 /**
