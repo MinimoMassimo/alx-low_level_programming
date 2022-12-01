@@ -45,6 +45,11 @@ void print_binary(unsigned long int n)
 	int curr = (int)n;
 	unsigned int exp = 0;
 
+	if (n == 0 || n == 1)
+	{
+		_putchar((n % 10) + '0');
+		return;
+	}
 	while (exp < n)
 	{
 		exp = exponent(2, size);
