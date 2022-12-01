@@ -30,6 +30,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int ans = 0;
 	int count = strlen(b);
+	int i =0;
 
 	if (b == NULL)
 		return (0);
@@ -37,9 +38,10 @@ unsigned int binary_to_uint(const char *b)
 	count -= 1;
 	for (; count >= 0; count--)
 	{
-		if (b[count] != 0 && b[count] != 1)
+		if (b[count] != '0' && b[count] != '1')
 			return (0);
-		ans += b[count] * exponent(2, count); 
+		ans += (b[count] - 48) * exponent(2, i); 
+		i++;
 	}
 	return (ans);
 }
