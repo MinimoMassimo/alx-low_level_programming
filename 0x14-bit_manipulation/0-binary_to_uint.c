@@ -32,7 +32,7 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	while (b[count] != NULL)
+	while (b[count])
 	{
 		if (b[count] != 0 && b[count] != 1)
 			return (0);
