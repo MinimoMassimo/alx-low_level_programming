@@ -9,7 +9,7 @@
 unsigned int exponent(unsigned int a, unsigned int b)
 {
 	unsigned int ans = 1;
-	int i;
+	unsigned int i;
 
 	if (a == 0)
 		return (0);
