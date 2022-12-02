@@ -29,12 +29,12 @@ unsigned int exponent(unsigned int a, unsigned int b)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int ans = 0;
-	int count = strlen(b);
+	int count;
 	int i = 0;
 
 	if (b == NULL)
 		return (0);
-
+	count = strlen(b);
 	count -= 1;
 	for (; count >= 0; count--)
 	{
