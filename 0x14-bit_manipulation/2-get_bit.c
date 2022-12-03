@@ -1,6 +1,5 @@
 #include "main.h"
 
- 
 /**
  * get_bit - returns value of a bit at an index
  * @n: the number which first needs to be made into binary
