@@ -23,9 +23,8 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 		else
 		{
-			if (len == temp)
-				continue;
-			_putchar('0');
+			if (len != temp)
+				_putchar('0');
 		}
 		len--;
 	}
