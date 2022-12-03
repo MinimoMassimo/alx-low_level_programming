@@ -21,6 +21,7 @@ void print_binary(unsigned long int n)
 		len++;
 		temp >>= 1;
 	}
+	len--;
 	while (len >= 0)
 	{
 		if ((n >> len) & 1)
