@@ -8,5 +8,15 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return (1);
+	unsigned int diff = 0;
+	unsigned long int difference;
+
+	/* the num of bits that are different (gotten by XOR operation)*/
+	difference = n ^ m; 
+	do {
+		diff += (difference & 1);
+		difference >>= 1;
+	} while
+		(difference > 0);
+	return (diff);
 }
