@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int difference;
 
 	/* the num of bits that are different (gotten by XOR operation)*/
-	difference = n ^ m; 
+	difference = n ^ m;
 	do {
 		diff += (difference & 1);
 		difference >>= 1;
