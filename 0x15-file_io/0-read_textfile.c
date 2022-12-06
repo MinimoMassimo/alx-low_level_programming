@@ -10,7 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	/* file descriptor*/
 	int fd;
-	ssize_t n_rd, n_Wr;
+	ssize_t n_rd, n_wr;
 	char *buffer;
 
 	if (filename == NULL)
@@ -28,13 +28,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	n_wr = write(STDOUT_FILENO, buffer, n_read);
-	if (n_wrote == -1)
+	n_wr = write(STDOUT_FILENO, buffer, n_rd);
+	if (n_wr == -1)
 	{
 		free(buffer);
 		close(fd);
 		return (0);
 	}
 	close(fd);
-	return(n_read);
+	return(n_rd);
 }
