@@ -16,7 +16,7 @@ int _len(char *str)
 
 /**
  * append_text_to_file - appends text to end of file
- * @filename: the file 
+ * @filename: the file
  * @text_content: string to add
  * Return: 1 if success, -1 otherwise
  */
