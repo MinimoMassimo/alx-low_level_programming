@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * _exit - for the exit codes
+ * _ex - for the exit codes
  * @err: the error num
  * @file: name of the file
  * @fd: the file descriptor
  * Return: 0 on default
  */
-int _exit(int err, char *file, int fd)
+int _ex(int err, char *file, int fd)
 {
 	switch (err)
 	{
@@ -45,23 +45,23 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 
 	if (argc > 3)
-		_exit(97, NULL, 0);
+		_ex(97, NULL, 0);
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
-		_exit(98, file_from, 0);
+		_ex(98, file_from, 0);
 	fd2 = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 == -1)
-		_exit(99, file_to, 0);
+		_ex(99, file_to, 0);
 	while ((n_rd = read(fd1, buffer, 1024)) != 0)
 	{
 		if (n_rd == -1)
-			_exit(98,file_from, 0);
+			_ex(98,file_from, 0);
 		n_wr = write(fd2, buffer, n_rd);
 		if (n_wr == -1)
-			_exit(99, file_to, 0);
+			_ex(99, file_to, 0);
 	}
 
-	close(fd1) == -1 ? (_exit(100, NULL, fd1)) : close(fd1);
-	close(fd2) == -1 ? (_exit(100, NULL, fd2)) : close(fd2);
+	close(fd1) == -1 ? (_ex(100, NULL, fd1)) : close(fd1);
+	close(fd2) == -1 ? (_ex(100, NULL, fd2)) : close(fd2);
 	return(0);
 }
