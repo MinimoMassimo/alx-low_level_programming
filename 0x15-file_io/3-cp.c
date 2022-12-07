@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	while ((n_rd = read(fd1, buffer, 1024)) != 0)
 	{
 		if (n_rd == -1)
-			_ex(98,file_from, 0);
+			_ex(98, file_from, 0);
 		n_wr = write(fd2, buffer, n_rd);
 		if (n_wr == -1)
 			_ex(99, file_to, 0);
@@ -63,5 +63,5 @@ int main(int argc, char *argv[])
 
 	close(fd1) == -1 ? (_ex(100, NULL, fd1)) : close(fd1);
 	close(fd2) == -1 ? (_ex(100, NULL, fd2)) : close(fd2);
-	return(0);
+	return (0);
 }
