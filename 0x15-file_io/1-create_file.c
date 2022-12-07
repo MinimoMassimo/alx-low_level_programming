@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+ * _len - counts length of string
+ * @str: the string
+ * Return: int
+ */
+int _len(char *str)
+{
+	int count = 0;
+
+	while (str[count])
+		count++;
+	return (count);
+}
+
+/**
  * create_file - creates a file
  * @filename: name of the file to create
  * @text_context: str to write to file
@@ -21,8 +35,8 @@ int create_file(const char *filename, char *text_content)
 		close(fd);
 		return (1);
 	}
-	n_wr = write(fd, text_content, strlen(text_content));
-	if (n_wr == -1 || (int) n_wr != strlen(text_content))
+	n_wr = write(fd, text_content, _len(text_content));
+	if (n_wr == -1 || (int) n_wr != _len(text_content))
 	{
 		close(fd);
 		return (-1);
