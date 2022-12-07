@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+ * _len - length of string
+ * @str: the string
+ * Return: length of the string
+ */
+int _len(char *str)
+{
+	int len;
+
+	for (len = 0; str[len] != 0; len++)
+		;
+	return (len);
+}
+
+/**
  * append_text_to_file - appends text to end of file
  * @filename: the file 
  * @text_content: string to add
@@ -21,8 +35,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		close(fd);
 		return (1);
 	}
-	n_wr = write(filename, text_content, strlen(text_content));
-	if (n_wr == -1 || n_wr != strlen(text_content))
+	n_wr = write(filename, text_content, _len(text_content));
+	if (n_wr == -1 || n_wr != _len(text_content))
 	{
 		close(fd);
 		return (-1);

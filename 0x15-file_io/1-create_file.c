@@ -17,7 +17,7 @@ int _len(char *str)
 /**
  * create_file - creates a file
  * @filename: name of the file to create
- * @text_context: str to write to file
+ * @text_content: str to write to file
  * Return: 1 if success, -1 otherwise
  */
 int create_file(const char *filename, char *text_content)
@@ -42,5 +42,5 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	close(fd);
-	return(1);
+	return (1);
 }
