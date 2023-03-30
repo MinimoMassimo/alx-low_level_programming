@@ -3,6 +3,7 @@
 Module 5
 """
 
+
 def island_perimeter(grid):
     """
     Returns perimeter of the island described in Grid
@@ -15,8 +16,13 @@ def island_perimeter(grid):
         Grid is completely surrounded by water with inside one or no islands
         there are no lakes - all water is connected to each other
     """
-    p = 0
+    r = 0
+    c = 0
     for row in range(len(grid)):
-        for col in range(len(grid[0])):
-            if grid[row][col] == 1:
-                return
+        for i in range(row + 1):
+            if grid[row][i] == 1 and grid[row][i - 1] == 0:
+                r = r + 1
+            if grid[row][i] == 1 and grid[row - 1][i] == 0:
+                c = c + 1
+
+    return ((r * 2) + (c * 2))
