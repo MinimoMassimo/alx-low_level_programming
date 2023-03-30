@@ -20,9 +20,10 @@ def island_perimeter(grid):
     c = 0
     for row in range(len(grid)):
         for i in range(len(grid[0])):
-            if grid[row][i] == 1 and grid[row][i - 1] == 0:
-                r = r + 1
-            if grid[row][i] == 1 and grid[row - 1][i] == 0:
-                c = c + 1
+            if grid[row][i] == 1:
+                if grid[row][i - 1] == 0 or i == 0:
+                    r = r + 1
+                if grid[row - 1][i] == 0 or row == 0:
+                    c = c + 1
 
     return ((r * 2) + (c * 2))
