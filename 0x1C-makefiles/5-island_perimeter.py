@@ -25,6 +25,4 @@ def island_perimeter(grid):
             if grid[row][i] == 1 and grid[row - 1][i] == 0:
                 c = c + 1
 
-    print("row: ", r)
-    print("col: ", c)
     return ((r * 2) + (c * 2))
