@@ -22,12 +22,13 @@ int main(void)
         dprintf(2, "Error: Can't malloc\n");
         return (EXIT_FAILURE);
     }
+    print_dlistint(head);
     new->n = 9;
     head->prev = new;
     new->next = head;
     new->prev = NULL;
     head = new;
-    n = print_dlistint(NULL);
+    n = print_dlistint(head);
     printf("-> %lu elements\n", n);
     free(new);
     return (EXIT_SUCCESS);
